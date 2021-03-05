@@ -9,14 +9,14 @@ def main() -> co.Serial:
         # - subfolder
         # - this_is_repo_root
 
-        B = co.Image(dockerfile="Dockerfile", context=".", copy_repo=True)
-        node["B context"] = co.Exec("ls /context", image=B)
+        #B = co.Image(dockerfile="Dockerfile", context=".", copy_repo=True)
+        #node["B context"] = co.Exec("ls /context", image=B)
         # - Dockerfile
         # - pipeline.py
         # - this_folder_containes_dockerfile
 
-        C = co.Image(dockerfile="Dockerfile", context=".")
-        node["C context"] = co.Exec("ls /context", image=C)
+        #C = co.Image(dockerfile="Dockerfile", context=".")
+        #node["C context"] = co.Exec("ls /context", image=C)
         # - Dockerfile
         # - pipeline.py
         # - this_folder_containes_dockerfile
