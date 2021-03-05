@@ -4,8 +4,10 @@ import conducto as co
 def main() -> co.Serial:
     with co.Serial() as node:
 
-        A = co.Image(dockerfile="Dockerfile", copy_repo=True)
-        node["A context"] = co.Exec("ls /context", image=A)
+        node["env"] = co.Exec("env")
+
+        #A = co.Image(dockerfile="Dockerfile", copy_repo=True)
+        #node["A context"] = co.Exec("ls /context", image=A)
         # - subfolder
         # - this_is_repo_root
 
